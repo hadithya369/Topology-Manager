@@ -1,0 +1,25 @@
+{
+    "graph": {
+      "path": "D:\\CS297\\Deliverable_2\\Topology Manager\\configs\\graph.txt"
+    },
+    "LLM": [
+      {
+        "id": 1,
+        "name": "mistralai/mistral-7b-instruct",
+        "apikeypath": "D:/CS297/openrouter.txt",
+        "instruction": "Summarize any quantities described in this question"
+      },
+      {
+        "id": 2,
+        "name": "mistralai/mistral-7b-instruct",
+        "apikeypath": "D:/CS297/openrouter.txt",
+        "instruction": "Summarize any logical relationships or interactions between entities in this questions"
+      },
+      {
+        "id": 3,
+        "name": "mistralai/mistral-7b-instruct",
+        "apikeypath": "D:/CS297/openrouter.txt",
+        "instruction": "Answer the given question"
+      }
+    ]
+  }
