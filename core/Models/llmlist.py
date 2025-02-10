@@ -1,5 +1,9 @@
 from .llm import LLM, LocalLLM
 import os
+import logging
+import time
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='D:/outputs/times.log', level=logging.INFO)
 
 class LLMList:
     def __init__(self):
@@ -26,6 +30,11 @@ class LLMList:
     
     def predict(self, id, query):
         return self.llms[id].predict(self.llmInstructions[id]+'\n'+query)
+
+    # def predict(self, id, query):
+    #     t1=time.time()
+    #     logger.info(f'[LLM Inference time]: {time.time()-t1}')
+    #     return query+'\nasdfsdfsdafsf'
 
 # llist = LLMList()
 # llist.addLLM(

@@ -1,23 +1,30 @@
 import requests
 import json
+import time
 from openai import OpenAI
 from ..DB.scrape import SearchTool
 from ..DB.vecdb import VectorSearch
+import logging
+import time
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='D:/outputs/times.log', level=logging.INFO)
 
 class LLM:
     def __init__(self, id, apiKey):
         self.id = id
         self.apiKey = apiKey
-
     
     def predict(self, query):
+        time.sleep(2)
+        t1=time.time()
         response = requests.post(
             url="https://openrouter.ai/api/v1/chat/completions",
             headers={
                 "Authorization": f"Bearer {self.apiKey}",
             },
             data=json.dumps({
-                "model": "mistralai/mistral-7b-instruct:free",
+                # "model": "mistralai/mistral-7b-instruct:free",
+                "model": "meta-llama/llama-3.2-3b-instruct:free",
                 "messages": [
                 {
                     "role": "user",
@@ -27,7 +34,8 @@ class LLM:
                 
             })
         )
-        
+        logger.info(f'[LLM Inference time]: {time.time()-t1}')
+
         if response.status_code==200:
             return response.json()['choices'][0]['message']['content']
         return 'API failure - Response code: '+str(response.status_code)

@@ -5,21 +5,45 @@
     "LLM": [
       {
         "id": 1,
-        "name": "mistralai/mistral-7b-instruct",
+        "name": "Optic Flow/Motion Cues",
         "apikeypath": "D:/CS297/openrouter.txt",
-        "instruction": "Summarize any quantities described in this question"
+        "instruction": "Simulation: This subsystem simulates the processing of visual motion to assess how the organism perceives its movement relative to the environment. It generates outputs that mimic how changes in visual patterns might inform speed and direction. Expected Outputs: Optic Flow: moving forward, Optic Flow: turning left, or other directional indicators. These outputs help simulate navigation by suggesting potential movements based on hypothetical visual inputs."
       },
       {
         "id": 2,
-        "name": "mistralai/mistral-7b-instruct",
+        "name": "Self-Motion Signals",
         "apikeypath": "D:/CS297/openrouter.txt",
-        "instruction": "Summarize any logical relationships or interactions between entities in this questions"
+        "instruction": "Inputs: Receive feedback from optic flow indicating movement. Outputs: Update head direction with signals like Self-Motion: adjust heading slightly right. Duties: Process feedback about the organisms own movements to refine orientation and trajectory. This ensures accurate navigation by continuously updating positional information."
       },
       {
         "id": 3,
-        "name": "mistralai/mistral-7b-instruct",
+        "name": "Multisensory Directional Cues",
         "apikeypath": "D:/CS297/openrouter.txt",
-        "instruction": "Answer the given question"
+        "instruction": "Simulation: This subsystem simulates the integration of sensory information from multiple sources, such as visual and auditory cues, to enhance spatial awareness. It models how an organism might orient itself using these cues. Expected Outputs: Multisensory Cues: head towards the sound, Multisensory Cues: orient to light source. These outputs suggest possible directions based on combined sensory data, even when inputs are random."
+      },
+      {
+        "id": 4,
+        "name": "Circadian/Visual Signals",
+        "apikeypath": "D:/CS297/openrouter.txt",
+        "instruction": "Simulation: This subsystem simulates the regulation of internal states based on environmental light cues. It models how organisms adjust their physiological and behavioral rhythms according to perceived time of day. Expected Outputs: Circadian Signals: prepare for sleep, Circadian Signals: increase activity. These outputs reflect potential changes in behavior or internal states prompted by varying light conditions, even if inputs are not specific."
+      },
+      {
+        "id": 5,
+        "name": "Stimulus Selection",
+        "apikeypath": "D:/CS297/openrouter.txt",
+        "instruction": "Inputs: You receive multiple sensory inputs competing for attention. Outputs: Select a primary stimulus, such as Stimulus Selection: track the moving object. Duties: Prioritize and focus on the most relevant stimuli from a range of sensory inputs. This subsystem filters out distractions, allowing the organism to concentrate on important tasks or threats."
+      },
+      {
+        "id": 6,
+        "name": "Head Direction",
+        "apikeypath": "D:/CS297/openrouter.txt",
+        "instruction": "Inputs: Receive orientation cues from selected stimuli and self-motion signals. Outputs: Maintain a stable heading like Head Direction: face north. Duties: Provide a consistent internal compass that guides navigation. This subsystem helps maintain orientation over time, even when external cues change."
+      },
+      {
+        "id": 7,
+        "name": "Internal Drives (Sleep, Hunger)",
+        "apikeypath": "D:/CS297/openrouter.txt",
+        "instruction": "Inputs: Receive hormonal signals indicating energy levels. Outputs: Influence behavior with outputs like Internal Drives: seek food or Internal Drives: rest. Duties: Drive behaviors based on physiological needs such as hunger or fatigue. This subsystem prioritizes actions that ensure survival and well-being by responding to internal states."
       }
     ]
   }
